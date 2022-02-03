@@ -1,0 +1,38 @@
+.wrapper {
+    display: grid;
+    grid-template-areas: "home score away";
+    grid-template-columns: 1fr 50px 1fr;
+    grid-template-rows: 150px;
+    border: 2px solid rgb(38, 0, 128);
+    width: 60%;
+    margin-left: 20%;
+    font-family: "Trebuchet MS", "Lucida Sans";
+    font-size: x-large;
+}
+
+.wrapper>div {
+    align-items: center;
+}
+
+.homeTeam {
+    background-color: rgb(9, 163, 163);
+    grid-area: home;
+}
+
+.awayTeam {
+    background-color: bisque;
+    grid-area: away;
+}
+
+.score {
+    background-color: rgb(255, 255, 255);
+    grid-area: score;
+    justify-self: stretch;
+}
+
+@media (max-width: 700px) {
+    .wrapper {
+        grid-template-columns: 43% 14% 43%;
+        font-size: large;
+    }
+}
