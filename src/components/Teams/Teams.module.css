@@ -1,0 +1,49 @@
+.wrapper {
+    display: grid;
+    margin: 0px 10% 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.fblogo {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    margin-top: 5px;
+    margin: 10px auto 10px;
+    display: block;
+    opacity: 1;
+    transition: opacity 124ms linear, transform 124ms linear;
+    /* Плавное изменение прозрачности и увеличения */
+}
+
+.items {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(190, 77, 77);
+    margin: 5px;
+    width: 300px;
+    border-radius: 70px;
+    overflow: hidden;
+    /* Ограничиваем видиую область */
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.fblogo:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .wrapper {
+        display: grid;
+        margin: 0px 0% 0px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .items {
+        width: 120px;
+    }
+    .fblogo {
+        width: 100px;
+        height: 100px;
+    }
+}
