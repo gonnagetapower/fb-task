@@ -1,16 +1,11 @@
 .app-wrapper {
-  display: grid;
-
-  grid-template-areas:
-  "header header "
-  "content content "
-  ;
-
-  grid-template-rows: 50px 1fr;
-  grid-template-columns: 2fr 10fr;
+    display: grid;
+    grid-template-areas: "header header " "content content ";
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: 2fr 10fr;
 }
 
 .app-wrapper-content {
-  grid-area: content;
-  background-color: #ffd1dc;
+    grid-area: content;
+    background-color: #c4002e;
 }

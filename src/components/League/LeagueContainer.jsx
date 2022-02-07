@@ -2,7 +2,8 @@ import React from "react";
 import * as axios from "axios";
 import League from "./League";
 import { connect } from "react-redux";
-import { setCompetition } from "../../redux/competitionsReducer";
+import { setCompetition , cancelCompettition , choiseCompettition } from "../../redux/competitionsReducer";
+import SearchBar from "../Search/Seach";
 
 class LeagueContainer extends React.Component {
     componentDidMount() {
@@ -17,7 +18,13 @@ class LeagueContainer extends React.Component {
     render() {
         return (
             <div>
-                <League competitions={this.props.competitions} />
+                <SearchBar/>
+                <League 
+                competitions={this.props.competitions} 
+                value={this.props.value}
+                choiseCompettition={this.props.choiseCompettition}
+                cancelCompettition={this.props.cancelCompettition}
+                />
             </div>
         )
     }
@@ -26,9 +33,13 @@ class LeagueContainer extends React.Component {
 let mapStateToProps = (state) => {
     return {
         competitions: state.competitionPage.competitions,
+        value: state.searchClass.value,
+        checked: state.competitionPage.checked
     }
 }
 
 export default connect(mapStateToProps, {
-    setCompetition: setCompetition
+    setCompetition: setCompetition,
+    cancelCompettition: cancelCompettition,
+    choiseCompettition: choiseCompettition
 })(LeagueContainer)
