@@ -11,14 +11,6 @@ What i used to create the project
 | ------ | ------ |
 | React | Redux |
 | Axios | Hooks and Classes |
-| Google Drive | [plugins/googledrive/README.md][PlGd] |
-| OneDrive | [plugins/onedrive/README.md][PlOd] |
-| Medium | [plugins/medium/README.md][PlMe] |
-| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
-
-| ------ | ------ |
-| React | Redux |[PlDb]
-| Axios | Hooks and Classes | [PlGh]
 
 
 
