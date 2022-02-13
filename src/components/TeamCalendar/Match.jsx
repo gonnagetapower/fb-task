@@ -2,7 +2,6 @@ import React from "react";
 import match from "./Match.module.css";
 
 const Match = (props) => {
-    console.log(props)
     return (
         <div>
             <div className={match.mainWrap}>

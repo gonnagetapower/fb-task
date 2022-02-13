@@ -4,7 +4,7 @@ import Header from './components/Header/Header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LeagueContainer from './components/League/LeagueContainer';
 import TeamsContainer from './components/Teams/TeamsContainer';
-import TeamCalendar from './components/TeamCalendar/TeamCalendar';
+import TeamCalendar from './components/TeamCalendar/TeamCalendar'
 
 
 const App = () => {

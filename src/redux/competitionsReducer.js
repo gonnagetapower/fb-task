@@ -5,6 +5,7 @@ const CANCEL_COMPETTITION = 'CANCEL_COMPETTITION';
 let initialState = {
     competitions: [],
     checked: false,
+    id: []
 }
 
 
@@ -12,32 +13,38 @@ const competitionsReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_COMPETITION:
             {
-                return { ...state, competitions: action.competitions }
+                return {...state, competitions: action.competitions }
             }
-        case CHOISE_COMPETTITON: {
-            return {
-                competitions: state.competitions.map( com => {
-                    if ( com.id === action.id) {
-                        return {
-                            ...com,
-                            checked: true
+        case CHOISE_COMPETTITON:
+            {
+                return {
+                    competitions: state.competitions.map(com => {
+                        if (com.id === action.id) {
+                            return {
+                                ...com,
+                                id: com.id,
+                                checked: true
+                            }
                         }
-                    } return com;
-                })
+                        return com;
+                    })
+                }
             }
-        }
-        case CANCEL_COMPETTITION: {
-            return {
-                competitions: state.competitions.map( com => {
-                    if ( com.id === action.id) {
-                        return {
-                            ...com,
-                            checked: false
+        case CANCEL_COMPETTITION:
+            {
+                return {
+                    competitions: state.competitions.map(com => {
+                        if (com.id === action.id) {
+                            return {
+                                ...com,
+                                id: com.id,
+                                checked: false
+                            }
                         }
-                    } return com;
-                })
+                        return com;
+                    })
+                }
             }
-        }
         default:
             return state;
     }

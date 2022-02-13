@@ -16,9 +16,6 @@ class TeamsContainer extends React.Component {
     render() {
         return (
             <div>
-                {/* {console.log(axios.get(`http://api.football-data.org/v2/teams/${57}/matches` , {
-      headers: { 'X-Auth-Token': '7d0c5dbb6d9c414ba0c7b513d50a4ab8' },
-    }))} */}
                 <Teams teams={this.props.teams} />
             </div>
         )
