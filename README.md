@@ -1,3 +1,5 @@
+## The application has not been finalized yet!!!
+
 ## Application for viewing matches, teams and leagues(API calls)
 The code is written in both functional and class style to show what I know.
 ## Installation
