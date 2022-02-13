@@ -1,4 +1,4 @@
-Application for viewing matches, teams and leagues(API calls)
+## Application for viewing matches, teams and leagues(API calls)
 
 ## Installation
 ```sh
