@@ -7,6 +7,7 @@ npm start
 
 What i used to create the project
 
+| ------ | ------ |
 | React | Redux |
 | Axios | Hooks and Classes |
 
