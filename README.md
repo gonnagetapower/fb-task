@@ -1,3 +1,5 @@
+Application for viewing matches, teams and leagues(API calls)
+
 ## Installation
 ```sh
 npm install
