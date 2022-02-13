@@ -1,8 +1,11 @@
 ## Installation
 ```sh
 npm install
+```
+```sh
 npm start
 ```
+
 ## Technologies
 
 What i used to create the project
