@@ -6,7 +6,7 @@ npm start
 ## Technologies
 
 What i used to create the project
-
+| Plugin | README |
 | ------ | ------ |
 | React | Redux |
 | Axios | Hooks and Classes |
