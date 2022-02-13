@@ -8,12 +8,11 @@ npm start
 
 ## Technologies
 
-What i used to create the project
-| ------ | ------ |
-| ------ | ------ |
-| React | Redux |
-| Axios | Hooks and Classes |
-
+- React
+- React-redux
+- Redux-thunk
+- Axios
+- Hooks and Classes components
 
 
 ![screen](https://github.com/gonnagetapower/fb-task/raw/master/src/assets/Screenshots/TeamPage.png)
