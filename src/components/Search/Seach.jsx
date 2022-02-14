@@ -16,7 +16,7 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.search}>
         <form onSubmit={this.onSubmit}>
           <input className={styles.textFieldinput}
             onChange={this.onChange}
