@@ -1,3 +1,8 @@
+.wrapper {
+    display: grid;
+    margin: 0 auto;
+}
+
 .border {
     list-style: none;
     padding: 0;
@@ -64,7 +69,18 @@
 }
 
 .arrow {
-    width: 20px;
-    height: 20px;
-    object-fit: cover;
+    margin-top: 10px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    float: right;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+@media (max-width: 700px) {
+    .arrow {
+        float: none;
+        margin-left: auto;
+    }
 }

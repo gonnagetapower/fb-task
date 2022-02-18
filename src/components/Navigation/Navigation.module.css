@@ -3,14 +3,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
-   }
+}
+
 .item a {
     color: white;
     text-decoration: none;
     font-size: xx-large;
     font-family: "Trebuchet MS", "Lucida Sans";
-}   
+}
 
-.item a.active{
+.item a.active {
     color: gold;
 }

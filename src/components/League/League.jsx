@@ -9,7 +9,7 @@ const League = (props) => {
   let data = props.competitions;
   let result = props.value;
   return (
-    <div >
+    <div className={classes.wrapper}>
       <ul className={classes.border}>
         {
           data.filter(com => {
@@ -22,18 +22,17 @@ const League = (props) => {
             return (
               <li key={com.id}>
                 <img align="middle" className={classes.fbLogo} src={com.area.ensignUrl != null ? com.area.ensignUrl : defaultBall}></img>
-                <span className={classes.name}>{com.name} <span> | Place : {com.area.name}</span></span>
+                <span className={classes.name}>{com.name} <span> | Place : {com.area.name}</span>
                 {com.checked ?
                   <div onClick={() => {
                     props.cancelCompettition(com.id);
                   }}>
                     <LeagueCalendar id={com.id} />
-                    <div>{com.currentSeason.startDate} - {com.currentSeason.endDate}</div>
                   </div>
-                  : <div onClick={() => {
+                  : <span onClick={() => {
                     props.choiseCompettition(com.id)
-                  }}><img className={classes.arrow} src={arrow}/></div>
-                }
+                  }}><img className={classes.arrow} src={arrow}/></span>
+                }</span>
               </li>
             )
           }

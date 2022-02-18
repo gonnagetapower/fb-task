@@ -1,6 +1,7 @@
 .item {
-    margin: 20px auto;
-    width: 50%;
+    display: grid;
+    margin: 10px auto;
+    width: 90%;
 }
 
 .tableResponsive {
@@ -12,7 +13,7 @@
 }
 
 th {
-    background: #BCEBDD;
+    background: #e94545;
     color: white;
     text-shadow: 0 1px 1px #2D2020;
     padding: 10px 20px;
@@ -23,11 +24,6 @@ td {
     border-style: solid;
     border-width: 0 1px 1px 0;
     border-color: white;
-}
-
-th:first-child,
-td:first-child {
-    text-align: left;
 }
 
 th:first-child {
@@ -41,7 +37,7 @@ th:last-child {
 
 td {
     padding: 10px 20px;
-    background: #F8E391;
+    background: #cf938ecc;
 }
 
 tr:last-child td:first-child {
@@ -57,22 +53,48 @@ tr td:last-child {
 }
 
 @media screen and (max-width: 700px) {
-    .table-responsive {
-        width: 100%;
-        margin-bottom: 15px;
-        overflow-y: hidden;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
-        border: 1px solid #ddd;
-    }
-    .table-responsive>.table {
-        margin-bottom: 0;
-    }
-    .table-responsive>.table>thead>tr>th,
-    .table-responsive>.table>tbody>tr>th,
-    .table-responsive>.table>tfoot>tr>th,
-    .table-responsive>.table>thead>tr>td,
-    .table-responsive>.table>tbody>tr>td,
-    .table-responsive>.table>tfoot>tr>td {
-        white-space: nowrap;
+    @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+        /* Force table to not be like tables anymore */
+        table, thead, tbody, th, td, tr {
+            display: block;
+        }
+        /* Hide table headers (but not display: none;, for accessibility) */
+        .head {
+            display: none;
+        }
+        tr {
+            margin: 0 0 1rem 0;
+        }
+        td {
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee;
+        }
+        td:before {
+            display: flex;
+            top: 0;
+            left: 6px;
+            width: 100%;
+            text-align: center;
+        }
+        /*
+		Label the data
+    You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
+		*/
+        td:nth-of-type(1):before {
+            content: "Away Team";
+        }
+        td:nth-of-type(2):before {
+            content: "Home Team";
+        }
+        td:nth-of-type(3):before {
+            content: "Status/Winner";
+        }
+        td:nth-of-type(4):before {
+            content: "Start Date";
+        }
+        td:nth-of-type(5):before {
+            content: "End Date";
+        }
     }
 }

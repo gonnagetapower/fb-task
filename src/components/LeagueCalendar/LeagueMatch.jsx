@@ -6,10 +6,10 @@ const LeagueMatch = (props) => {
         <div className={styles.wrapper}>
             <div className={styles.item}>
             <table className={styles.tableResponsive}>
-                <tr>
+                <tr className={styles.head}>
                     <th>Away Team</th>
                     <th>Home Team</th>
-                    <th>Status</th>
+                    <th>Status/Winner</th>
                     <th>Start Date</th>
                     <th>End Date</th>
                 </tr>
@@ -19,7 +19,7 @@ const LeagueMatch = (props) => {
                         <tr key={vvv.id}>
                             <td >{vvv.awayTeam.name}</td>
                             <td >{vvv.homeTeam.name}</td>
-                            <td >{vvv.status !== 'SCHEDULED' ? vvv.score.winner : vvv.status}</td>
+                            <td >{vvv.status !== 'SCHEDULED' ? vvv.score.winner  : vvv.status}</td>
                             <td >{vvv.season.startDate}</td>
                             <td >{vvv.season.endDate}</td>
                         </tr>
